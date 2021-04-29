@@ -1,0 +1,24 @@
+{
+    "name": "mallery",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BijanProgrammer/mallery.git"
+    },
+    "keywords": [
+        "music",
+        "gallery",
+        "player",
+        "music-player"
+    ],
+    "author": "BijanProgrammer",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/BijanProgrammer/mallery/issues"
+    },
+    "homepage": "https://github.com/BijanProgrammer/mallery#readme"
+}
