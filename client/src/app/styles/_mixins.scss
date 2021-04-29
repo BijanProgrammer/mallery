@@ -1,0 +1,8 @@
+/************* TRANSITIONS ************/
+@mixin grow-on-hover($scale: 1.1, $duration: 0.1s) {
+  transition: transform $duration ease-in-out;
+
+  &:hover {
+    transform: scale($scale, $scale);
+  }
+}

@@ -1,1 +1,136 @@
-/* You can add global styles to this file, and also import other style files */
+@use "src/app/styles";
+
+/************* VARIABLES **************/
+@mixin _generate-typography(
+    $name,
+    $size,
+    $weight,
+    $letter-spacing,
+    $line-height
+) {
+    --font-size-#{$name}: #{$size};
+    --font-weight-#{$name}: #{$weight};
+    --letter-spacing-#{$name}: #{$letter-spacing};
+    --line-height-#{$name}: #{$line-height};
+}
+
+:root {
+    @include _generate-typography(h1, 3.6rem, 700, -0.15rem, 200%);
+    @include _generate-typography(h2, 2.8rem, 700, -0.05rem, 200%);
+    @include _generate-typography(h3, 2.4rem, 700, 0, 200%);
+    @include _generate-typography(h4, 2rem, 700, 0.025rem, 200%);
+    @include _generate-typography(h5, 1.8rem, 700, 0, 200%);
+    @include _generate-typography(h6, 1.6rem, 700, 0.015rem, 200%);
+    @include _generate-typography(subtitle1, 1.4rem, 700, 0.015rem, 200%);
+    @include _generate-typography(subtitle2, 1.4rem, 500, 0.01rem, 200%);
+    @include _generate-typography(body1, 1.2rem, 400, 0.05rem, 150%);
+    @include _generate-typography(body2, 1rem, 400, 0.025rem, 150%);
+    @include _generate-typography(button, 1.4rem, 500, 0.125rem, 150%);
+    @include _generate-typography(caption, 1.2rem, 400, 0.04rem, 150%);
+    @include _generate-typography(overline, 1rem, 400, 0.15rem, 150%);
+}
+
+/*************** RESET ****************/
+*,
+*:before,
+*:after {
+    background: none;
+    
+    box-sizing: border-box;
+    
+    margin: 0;
+    padding: 0;
+    
+    border: none;
+    outline: none;
+    
+    font-family: "Samim", sans-serif;
+    
+    text-decoration: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+*::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: styles.$color-gray-75;
+    
+    border: none;
+    border-radius: 1rem;
+}
+
+html {
+    font-size: 62.5%;
+    font-weight: 400;
+}
+
+/************** DEFAULTS **************/
+body {
+    direction: rtl;
+    
+    background-color: styles.$color-body-background;
+    color: styles.$color-body-foreground;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    @include styles.typography-h1;
+}
+
+h2 {
+    @include styles.typography-h2;
+}
+
+h3 {
+    @include styles.typography-h3;
+}
+
+h4 {
+    @include styles.typography-h4;
+}
+
+h5 {
+    @include styles.typography-h5;
+}
+
+h6 {
+    @include styles.typography-h6;
+}
+
+a {
+    color: styles.$color-body-foreground;
+    
+    &:hover {
+        color: currentColor;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+svg {
+    display: flex;
+}
+
+/************ PAGE LAYOUT *************/
+#root {
+    display: flex;
+    flex-direction: column;
+    
+    main {
+        flex: 1;
+    }
+}
