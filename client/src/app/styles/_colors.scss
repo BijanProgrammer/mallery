@@ -46,10 +46,10 @@ $shade-light-gray-10: transparentize($color-gray-95, 0.1);
 
 /************** GRADIENTS *************/
 $linear-gradient-100-50-100: linear-gradient(
-  0deg,
-  $color-gray-10,
-  $shade-dark-gray-50,
-  $color-gray-10
+                0deg,
+                $color-gray-10,
+                $shade-dark-gray-50,
+                $color-gray-10
 );
 
 /************** SHADOWS ***************/
@@ -61,38 +61,38 @@ $shadow-less-subtle-filter: drop-shadow(0 0 0.2rem $shade-dark-gray-70);
 
 $shadow-less-subtle-bottom: 0 0.2rem 0.2rem $shade-dark-gray-70;
 $shadow-less-subtle-bottom-filter: drop-shadow(
-  0 0.2rem 0.2rem $shade-dark-gray-70
+                0 0.2rem 0.2rem $shade-dark-gray-70
 );
 
 /*********** UTILITY CLASSES **********/
 .primary {
-  color: $color-primary;
+    color: $color-primary;
 }
 
 .accent {
-  color: $color-accent;
+    color: $color-accent;
 }
 
 .success {
-  color: $color-success;
+    color: $color-success;
 }
 
 .danger {
-  color: $color-danger;
+    color: $color-danger;
 }
 
 .bg-primary {
-  background: $color-primary;
+    background: $color-primary;
 }
 
 .bg-accent {
-  background: $color-accent;
+    background: $color-accent;
 }
 
 .bg-success {
-  background: $color-success;
+    background: $color-success;
 }
 
 .bg-danger {
-  background: $color-danger;
+    background: $color-danger;
 }
